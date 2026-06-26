@@ -1,0 +1,13 @@
+CREATE DATABASE student_management;
+
+USE student_management;
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    student_number VARCHAR(50) NOT NULL UNIQUE,
+    year_of_study INT NOT NULL,
+    batch_name VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
